@@ -1,0 +1,9 @@
+# Secrets - never commit these!
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

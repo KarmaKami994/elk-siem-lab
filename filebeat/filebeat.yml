@@ -1,0 +1,26 @@
+filebeat.inputs:
+  - type: filestream
+    id: docker-logs
+    paths:
+      - /var/lib/docker/containers/*/*.log
+    parsers:
+      - container: ~
+    processors:
+      - add_docker_metadata:
+          host: "unix:///var/run/docker.sock"
+
+  - type: filestream
+    id: system-logs
+    paths:
+      - /var/log/syslog
+      - /var/log/auth.log
+    fields:
+      log_type: system
+
+output.logstash:
+  hosts: ["logstash:5044"]
+
+setup.kibana:
+  host: "http://kibana:5601"
+
+logging.level: info
