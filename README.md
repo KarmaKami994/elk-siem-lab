@@ -3,9 +3,6 @@
 Ein selbst aufgebautes Security Information and Event Management (SIEM) System
 basierend auf dem ELK Stack, deployed auf einem privaten Homelab Server.
 
-Dieses Projekt wurde als praktisches Portfolio-Projekt für eine Karriere als
-SOC Analyst aufgebaut.
-
 ---
 
 ## 🎯 Projektziel
